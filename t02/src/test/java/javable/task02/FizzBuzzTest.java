@@ -1,6 +1,9 @@
+package javable.task02;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import javable.task02.FizzBuzz;
 import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
@@ -29,6 +32,12 @@ class FizzBuzzTest {
     FizzBuzz fb = new FizzBuzz();
     assertEquals("1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n16"
         , fb.fizzbuzz(16));
+  }
+
+  @Test
+  void FizzBuzzForZero() {
+    FizzBuzz fb = new FizzBuzz();
+    assertEquals("", fb.fizzbuzz(0));
   }
 
 }
