@@ -11,7 +11,7 @@ class FizzBuzzTest {
   @Test
   void FizzBuzzForFour() {
     FizzBuzz fb = new FizzBuzz();
-    assertEquals("1\n2\nfizz\n4\n", fb.fizzbuzz(4));
+    assertEquals("1\n2\nfizz\n4", fb.fizzbuzz(4));
   }
 
   @Test
@@ -30,7 +30,7 @@ class FizzBuzzTest {
   @Test
   void FizzBuzzForSixteen() {
     FizzBuzz fb = new FizzBuzz();
-    assertEquals("1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n16\n"
+    assertEquals("1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n16"
         , fb.fizzbuzz(16));
   }
 

@@ -9,14 +9,27 @@ class FizzBuzz {
         for (int i = 1; i <= n; i++) {
             if (i % 3 == 0) {
                 if (i % 5 == 0) {
-                    end = end.concat("fizzbuzz\n");
+                    if(i == n) {
+                        end = end.concat("fizzbuzz");
+                    } else
+                        end = end.concat("fizzbuzz\n");
                 } else {
-                    end = end.concat("fizz\n");
+                    if(i == n) {
+                        end = end.concat("fizz");
+                    } else
+                        end = end.concat("fizz\n");
                 }
             } else if (i % 5 == 0) {
+                if(i == n) {
+                    end = end.concat("buzz");
+                }
                 end = end.concat("buzz\n");
-            } else
-            end = end.concat(String.valueOf(i)+"\n");
+            } else {
+                if(i == n) {
+                    end = end.concat(String.valueOf(i));
+                }else
+                    end = end.concat(String.valueOf(i) + "\n");
+            }
         }
 
         return end;
