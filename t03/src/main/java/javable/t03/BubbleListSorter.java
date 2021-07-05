@@ -8,10 +8,12 @@ public class BubbleListSorter<T extends Comparable<T>> implements ListSorter<T> 
     public void sort(List<T> list) {
         T temp;
         boolean sorted = false;
-
+        if(list == null || list.isEmpty()) {
+            return;
+        }
         while (!sorted) {
             sorted = true;
-            if(list != null) {
+
                 for (int i = 0; i < list.size() - 1; i++) {
                     if (list.get(i).compareTo(list.get(i + 1)) > 0) {
                         temp = list.get(i);
@@ -20,7 +22,7 @@ public class BubbleListSorter<T extends Comparable<T>> implements ListSorter<T> 
                         sorted = false;
                     }
                 }
-            }
+
         }
         }
 }
